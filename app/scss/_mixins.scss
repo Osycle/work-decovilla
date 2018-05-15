@@ -1,0 +1,136 @@
+
+
+
+
+
+
+
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+@function fixPx( $string ){
+	@return str-slice( quote($string), 1, str-length(quote($string))-2 );
+}
+
+
+
+
+
+
+
+
+
+
+
+@mixin modal-center($width, $height: false) {
+
+	width: $width;
+	margin-left: -+($width/2);
+  left: 50%;
+  if $height{
+		height: $height;
+		margin-top: -+($height/2);
+		top: 50%;
+  }
+}
+@mixin img-flex-align( $align: center, $mheight: 0, $tag: ".img-content" ) {
+
+	#{$tag}{
+
+		@if $mheight !=	0{	min-height: $mheight; }
+
+		display: flex;
+		align-items: $align;
+		&.center 				{ align-items: center; }
+		&.top 					{ align-items: end; align-items: flex-end; }
+		&.start 				{ align-items: start; align-items: flex-start; }
+	}
+
+}
+
+@mixin placeholder( $color ) {
+
+	&::-moz-placeholder { color: $color;opacity: 1; }
+	&:-ms-input-placeholder { color:$color; }
+	&::-webkit-input-placeholder { color: $color; }
+	&::-ms-expand { border: 0;background-color: transparent; }
+
+}
+
+
+
+@mixin img-auto-adaptive( $width: auto ){
+	img{
+		max-height: 100%;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+		display: block;
+		&:not([width]){
+
+			@if $width == auto{
+				width: auto;
+			}
+			@else{
+				width: $width;
+			}
+		}
+	}
+}
+
+
+
+@mixin align-cells( $width: 75, $item: 3, $style: table, $tag: figure, $imgWidth: auto ) {
+
+	$mrow : ( (100 - $width)/($item*2) )+%;
+	
+	margin-left: -#{$mrow};
+	margin-right: -#{$mrow};
+
+	letter-spacing: -6px;
+	*{
+		letter-spacing: 0;
+	}
+
+	#{$tag}{
+
+		margin-left: $mrow;
+		margin-right: $mrow;
+
+		@if $style ==	block{
+			float: left;
+			width: ($width/$item)+%;
+		} 
+
+		@else if $style == table {
+
+			display: inline-table;
+			vertical-align: top;
+			width: ($width/$item)+%;
+			@include img-auto-adaptive($imgWidth);
+
+
+		}
+	}
+}
+
+
+@mixin align-fixWidth( $width, $items: 0, $fwidth: $container-lg-value, $tag: "figure" ){	
+	letter-spacing: -6px;
+	*{
+		letter-spacing: 0;
+	}
+	
+	//margin-right: -( ( $fwidth - ($width * $items) ) / ($fwidth / 100) / $items/2 )+%;
+	margin-left: -(( ( $fwidth - ($width * $items) ) /($items - 1) )/2)+px;
+	margin-right: -(( ( $fwidth - ($width * $items) ) /($items - 1) )/2)+px;
+	#{$tag}{
+		@include img-auto-adaptive();
+		margin-left: (( ( $fwidth - ($width * $items) ) /($items - 1) )/2)+px;
+		margin-right: (( ( $fwidth - ($width * $items) ) /($items - 1) )/2)+px;
+		width: $width+px;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
