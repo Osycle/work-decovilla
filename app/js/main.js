@@ -14,6 +14,11 @@
     });
     setTimeout(function() { AOS.refresh(); }, 1000);
 
+    skrollr.init({
+      smoothScrolling: false,
+      forceHeight: false,
+      mobileDeceleration: 0.004
+    });
 
     //--MMENU
     $("#min-menu").mmenu({
@@ -113,6 +118,52 @@
         percentPosition: true,
         cellAlign: 'left'
       });
+    
+
+
+    // $('.carpets-carousel .carousel-items').flickity({
+    //   imagesLoaded: true,
+    //   autoPlay: false,
+    //   pauseAutoPlayOnHover: false,
+    //   arrowShape: arrowStyle,
+    //   initialIndex: 1,
+    //   prevNextButtons: false,
+    //   draggable: false,
+    //   wrapAround: false,
+    //   pageDots: false,
+    //   freeScroll: true,
+    //   contain: true,
+    //   percentPosition: true,
+    //   cellAlign: 'center'
+    // });
+
+    var fullFigureWidth = 0;
+    var carpetsWidth = $(".carpets-carousel").width();
+    var carpetsWidthPer = 100/carpetsWidth;
+
+    $(".carpets-carousel figure").map(function(i, el){
+      fullFigureWidth += ($(el).outerWidth()+30);
+      console.log( fullFigureWidth )
+    })
+    $(".carpets-carousel .carousel-items").css({
+      width: fullFigureWidth+"px"
+    })
+    
+    $(".carpets-carousel").on("mousemove", function(e){
+      var offset = (fullFigureWidth - carpetsWidth)*carpetsWidthPer;
+      var mouseX = e.clientX;
+
+      var mousePer =  -(roundFix(carpetsWidthPer*mouseX, 3))/2
+      console.log( mousePer, carpetsWidth, offset )
+      //if( (-offset*2)<mousePer )
+        $(".carousel-items").css({'transform': 'translateX('+mousePer+'%)'})
+      
+    })
+    
+
+
+
+
       $('.short-reviews-carousel .carousel-items').flickity({
         imagesLoaded: true,
         autoPlay: 3000,
@@ -129,38 +180,7 @@
         percentPosition: true,
         cellAlign: 'left'
       });
-    //if ($(".short-staff-carousel .carousel-items figure").length > 3)
-      var carouselStaffMain = $('.short-staff-carousel.carousel-main .carousel-items').flickity({
-        imagesLoaded: true,
-        autoPlay: false,
-        pauseAutoPlayOnHover: true,
-        arrowShape: arrowStyle,
-        initialIndex: 2,
-        prevNextButtons: false,
-        draggable: false,
-        wrapAround: true,
-        pageDots: false,
-        friction: 1,
-        selectedAttraction: 1,
-        contain: false,
-        percentPosition: true,
-        cellAlign: 'center'
-      })
-      $('.short-staff-carousel.carousel-nav .carousel-items').flickity({
-        imagesLoaded: true,
-        autoPlay: 3000,
-        pauseAutoPlayOnHover: true,
-        arrowShape: arrowStyle,
-        asNavFor: carouselStaffMain[0],
-        initialIndex: 1,
-        prevNextButtons: true,
-        draggable: true,
-        wrapAround: true,
-        pageDots: false,
-        contain: false,
-        percentPosition: true,
-        cellAlign: 'center'
-      });
+
     // FANCYBOX
     if ($("[data-fancybox='gallery']").length != 0)
       $("[data-fancybox='gallery']").fancybox({
@@ -330,7 +350,7 @@
         revSlider.revolution({
           delay: 6000,
           startwidth: checkSm() ? $(window).width() : checkMd() ? 970 : 1170,
-          startheight: checkSm() ? 450 : bannerSlider ? 400 : 580,
+          startheight: checkSm() ? 450 : bannerSlider ? 400 : $(window).height(),
           autoHeight: "off",
           fullScreenAlignForce: "off",
 
@@ -469,4 +489,9 @@ function scrolledDiv(el) {
   }
 
   return elBottom <= docViewBottom && elTop >= docViewTop;
+}
+function roundFix( num, cnt ){
+  num = num+""
+  cnt = cnt + (/./.test(num) || null ? 1 : 0);
+  return num.substring( 0,  cnt)*1
 }
