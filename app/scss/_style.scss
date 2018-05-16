@@ -1560,7 +1560,7 @@ a[target="_blank"]{
 		z-index: 0;
 		img{
 			transition: transform 0.8s ease;
-			transform:  rotateZ(45deg) scale(0.7);
+			transform:  rotateZ(45deg) scale(0.8);
 			transform-origin: 50% 50%;
 			filter: drop-shadow(0 0 4px rgba(black, 0.5));
 		}
@@ -1568,7 +1568,7 @@ a[target="_blank"]{
 			z-index: 1 !important;
 			img{
 				//transform: inherit;
-				transform: scale(1);
+				transform: scale(1.05);
 			}
 		}
 	}
@@ -1711,29 +1711,66 @@ a[target="_blank"]{
 
 
 
+//short-carpets
+.short-carpets{
+	figure{
+		.img{
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px;
+		}
+		a{
+			&:focus{
+				outline: 0;
+			}
+		}
+	}
+	.carpets-carousel{
+		padding: 120px 0;
+	}
+	.scroll-mouse{
+		.img-content{
+			//display: inline-block;
+			position: relative;
+			&:before, &:after{
+				@extend .claf;
+				height: 1px;
+				background-color: rgba(black, 0.8);
+				width: 48%;
+				top: 50%;
+			}
+			&:after{
+				right: 0;
+				left: unset;
+			}
+		}
+	}
+}
+
 
 .carpets-carousel{
 	.flickity-slider{
 		transition: all 0.2s linear;
 	}
-	.carousel-items{
-		transition: all 0.3s linear;
+	.carousel-wrapper{
+		transition: transform 3s cubic-bezier(0, 0, 0.2, 1); 
 		white-space: nowrap;
 	}
-	figure{
+	li{
 		display: inline-block;
-		
-
-
-
-		width: 150px;
 		margin: 0 15px;
+	}
+	figure{		
+		width: 200px;
 		.img{
-			height: 200px;
+			background-color: $color-2;
+			height: 250px;
 			background-position: center;
 		}
 	}
 }
+
+
+
+
 
 
 /*

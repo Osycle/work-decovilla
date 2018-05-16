@@ -2875,8 +2875,7 @@ template {
   .table, table {
     border-collapse: collapse !important; }
     .table td, table td,
-    .table th,
-    table th {
+    .table th, table th {
       background-color: #fff !important; }
   .table-bordered th,
   .table-bordered td {
@@ -2965,8 +2964,7 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
+.sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
@@ -3883,16 +3881,11 @@ th {
   max-width: 100%;
   margin-bottom: 20px; }
   .table > thead > tr > th, table > thead > tr > th,
-  .table > thead > tr > td,
-  table > thead > tr > td,
-  .table > tbody > tr > th,
-  table > tbody > tr > th,
-  .table > tbody > tr > td,
-  table > tbody > tr > td,
-  .table > tfoot > tr > th,
-  table > tfoot > tr > th,
-  .table > tfoot > tr > td,
-  table > tfoot > tr > td {
+  .table > thead > tr > td, table > thead > tr > td,
+  .table > tbody > tr > th, table > tbody > tr > th,
+  .table > tbody > tr > td, table > tbody > tr > td,
+  .table > tfoot > tr > th, table > tfoot > tr > th,
+  .table > tfoot > tr > td, table > tfoot > tr > td {
     padding: 8px;
     line-height: 1.42857;
     vertical-align: top;
@@ -3901,16 +3894,11 @@ th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd; }
   .table > caption + thead > tr:first-child > th, table > caption + thead > tr:first-child > th,
-  .table > caption + thead > tr:first-child > td,
-  table > caption + thead > tr:first-child > td,
-  .table > colgroup + thead > tr:first-child > th,
-  table > colgroup + thead > tr:first-child > th,
-  .table > colgroup + thead > tr:first-child > td,
-  table > colgroup + thead > tr:first-child > td,
-  .table > thead:first-child > tr:first-child > th,
-  table > thead:first-child > tr:first-child > th,
-  .table > thead:first-child > tr:first-child > td,
-  table > thead:first-child > tr:first-child > td {
+  .table > caption + thead > tr:first-child > td, table > caption + thead > tr:first-child > td,
+  .table > colgroup + thead > tr:first-child > th, table > colgroup + thead > tr:first-child > th,
+  .table > colgroup + thead > tr:first-child > td, table > colgroup + thead > tr:first-child > td,
+  .table > thead:first-child > tr:first-child > th, table > thead:first-child > tr:first-child > th,
+  .table > thead:first-child > tr:first-child > td, table > thead:first-child > tr:first-child > td {
     border-top: 0; }
   .table > tbody + tbody, table > tbody + tbody {
     border-top: 2px solid #ddd; }
@@ -3956,28 +3944,17 @@ table th[class*="col-"] {
   display: table-cell; }
 
 .table > thead > tr > td.active, table > thead > tr > td.active,
-.table > thead > tr > th.active,
-table > thead > tr > th.active,
-.table > thead > tr.active > td,
-table > thead > tr.active > td,
-.table > thead > tr.active > th,
-table > thead > tr.active > th,
-.table > tbody > tr > td.active,
-table > tbody > tr > td.active,
-.table > tbody > tr > th.active,
-table > tbody > tr > th.active,
-.table > tbody > tr.active > td,
-table > tbody > tr.active > td,
-.table > tbody > tr.active > th,
-table > tbody > tr.active > th,
-.table > tfoot > tr > td.active,
-table > tfoot > tr > td.active,
-.table > tfoot > tr > th.active,
-table > tfoot > tr > th.active,
-.table > tfoot > tr.active > td,
-table > tfoot > tr.active > td,
-.table > tfoot > tr.active > th,
-table > tfoot > tr.active > th {
+.table > thead > tr > th.active, table > thead > tr > th.active,
+.table > thead > tr.active > td, table > thead > tr.active > td,
+.table > thead > tr.active > th, table > thead > tr.active > th,
+.table > tbody > tr > td.active, table > tbody > tr > td.active,
+.table > tbody > tr > th.active, table > tbody > tr > th.active,
+.table > tbody > tr.active > td, table > tbody > tr.active > td,
+.table > tbody > tr.active > th, table > tbody > tr.active > th,
+.table > tfoot > tr > td.active, table > tfoot > tr > td.active,
+.table > tfoot > tr > th.active, table > tfoot > tr > th.active,
+.table > tfoot > tr.active > td, table > tfoot > tr.active > td,
+.table > tfoot > tr.active > th, table > tfoot > tr.active > th {
   background-color: #f5f5f5; }
 
 .table-hover > tbody > tr > td.active:hover,
@@ -3988,28 +3965,17 @@ table > tfoot > tr.active > th {
   background-color: #e8e8e8; }
 
 .table > thead > tr > td.success, table > thead > tr > td.success,
-.table > thead > tr > th.success,
-table > thead > tr > th.success,
-.table > thead > tr.success > td,
-table > thead > tr.success > td,
-.table > thead > tr.success > th,
-table > thead > tr.success > th,
-.table > tbody > tr > td.success,
-table > tbody > tr > td.success,
-.table > tbody > tr > th.success,
-table > tbody > tr > th.success,
-.table > tbody > tr.success > td,
-table > tbody > tr.success > td,
-.table > tbody > tr.success > th,
-table > tbody > tr.success > th,
-.table > tfoot > tr > td.success,
-table > tfoot > tr > td.success,
-.table > tfoot > tr > th.success,
-table > tfoot > tr > th.success,
-.table > tfoot > tr.success > td,
-table > tfoot > tr.success > td,
-.table > tfoot > tr.success > th,
-table > tfoot > tr.success > th {
+.table > thead > tr > th.success, table > thead > tr > th.success,
+.table > thead > tr.success > td, table > thead > tr.success > td,
+.table > thead > tr.success > th, table > thead > tr.success > th,
+.table > tbody > tr > td.success, table > tbody > tr > td.success,
+.table > tbody > tr > th.success, table > tbody > tr > th.success,
+.table > tbody > tr.success > td, table > tbody > tr.success > td,
+.table > tbody > tr.success > th, table > tbody > tr.success > th,
+.table > tfoot > tr > td.success, table > tfoot > tr > td.success,
+.table > tfoot > tr > th.success, table > tfoot > tr > th.success,
+.table > tfoot > tr.success > td, table > tfoot > tr.success > td,
+.table > tfoot > tr.success > th, table > tfoot > tr.success > th {
   background-color: #dff0d8; }
 
 .table-hover > tbody > tr > td.success:hover,
@@ -4020,28 +3986,17 @@ table > tfoot > tr.success > th {
   background-color: #d0e9c6; }
 
 .table > thead > tr > td.info, table > thead > tr > td.info,
-.table > thead > tr > th.info,
-table > thead > tr > th.info,
-.table > thead > tr.info > td,
-table > thead > tr.info > td,
-.table > thead > tr.info > th,
-table > thead > tr.info > th,
-.table > tbody > tr > td.info,
-table > tbody > tr > td.info,
-.table > tbody > tr > th.info,
-table > tbody > tr > th.info,
-.table > tbody > tr.info > td,
-table > tbody > tr.info > td,
-.table > tbody > tr.info > th,
-table > tbody > tr.info > th,
-.table > tfoot > tr > td.info,
-table > tfoot > tr > td.info,
-.table > tfoot > tr > th.info,
-table > tfoot > tr > th.info,
-.table > tfoot > tr.info > td,
-table > tfoot > tr.info > td,
-.table > tfoot > tr.info > th,
-table > tfoot > tr.info > th {
+.table > thead > tr > th.info, table > thead > tr > th.info,
+.table > thead > tr.info > td, table > thead > tr.info > td,
+.table > thead > tr.info > th, table > thead > tr.info > th,
+.table > tbody > tr > td.info, table > tbody > tr > td.info,
+.table > tbody > tr > th.info, table > tbody > tr > th.info,
+.table > tbody > tr.info > td, table > tbody > tr.info > td,
+.table > tbody > tr.info > th, table > tbody > tr.info > th,
+.table > tfoot > tr > td.info, table > tfoot > tr > td.info,
+.table > tfoot > tr > th.info, table > tfoot > tr > th.info,
+.table > tfoot > tr.info > td, table > tfoot > tr.info > td,
+.table > tfoot > tr.info > th, table > tfoot > tr.info > th {
   background-color: #d9edf7; }
 
 .table-hover > tbody > tr > td.info:hover,
@@ -4052,28 +4007,17 @@ table > tfoot > tr.info > th {
   background-color: #c4e3f3; }
 
 .table > thead > tr > td.warning, table > thead > tr > td.warning,
-.table > thead > tr > th.warning,
-table > thead > tr > th.warning,
-.table > thead > tr.warning > td,
-table > thead > tr.warning > td,
-.table > thead > tr.warning > th,
-table > thead > tr.warning > th,
-.table > tbody > tr > td.warning,
-table > tbody > tr > td.warning,
-.table > tbody > tr > th.warning,
-table > tbody > tr > th.warning,
-.table > tbody > tr.warning > td,
-table > tbody > tr.warning > td,
-.table > tbody > tr.warning > th,
-table > tbody > tr.warning > th,
-.table > tfoot > tr > td.warning,
-table > tfoot > tr > td.warning,
-.table > tfoot > tr > th.warning,
-table > tfoot > tr > th.warning,
-.table > tfoot > tr.warning > td,
-table > tfoot > tr.warning > td,
-.table > tfoot > tr.warning > th,
-table > tfoot > tr.warning > th {
+.table > thead > tr > th.warning, table > thead > tr > th.warning,
+.table > thead > tr.warning > td, table > thead > tr.warning > td,
+.table > thead > tr.warning > th, table > thead > tr.warning > th,
+.table > tbody > tr > td.warning, table > tbody > tr > td.warning,
+.table > tbody > tr > th.warning, table > tbody > tr > th.warning,
+.table > tbody > tr.warning > td, table > tbody > tr.warning > td,
+.table > tbody > tr.warning > th, table > tbody > tr.warning > th,
+.table > tfoot > tr > td.warning, table > tfoot > tr > td.warning,
+.table > tfoot > tr > th.warning, table > tfoot > tr > th.warning,
+.table > tfoot > tr.warning > td, table > tfoot > tr.warning > td,
+.table > tfoot > tr.warning > th, table > tfoot > tr.warning > th {
   background-color: #fcf8e3; }
 
 .table-hover > tbody > tr > td.warning:hover,
@@ -4084,28 +4028,17 @@ table > tfoot > tr.warning > th {
   background-color: #faf2cc; }
 
 .table > thead > tr > td.danger, table > thead > tr > td.danger,
-.table > thead > tr > th.danger,
-table > thead > tr > th.danger,
-.table > thead > tr.danger > td,
-table > thead > tr.danger > td,
-.table > thead > tr.danger > th,
-table > thead > tr.danger > th,
-.table > tbody > tr > td.danger,
-table > tbody > tr > td.danger,
-.table > tbody > tr > th.danger,
-table > tbody > tr > th.danger,
-.table > tbody > tr.danger > td,
-table > tbody > tr.danger > td,
-.table > tbody > tr.danger > th,
-table > tbody > tr.danger > th,
-.table > tfoot > tr > td.danger,
-table > tfoot > tr > td.danger,
-.table > tfoot > tr > th.danger,
-table > tfoot > tr > th.danger,
-.table > tfoot > tr.danger > td,
-table > tfoot > tr.danger > td,
-.table > tfoot > tr.danger > th,
-table > tfoot > tr.danger > th {
+.table > thead > tr > th.danger, table > thead > tr > th.danger,
+.table > thead > tr.danger > td, table > thead > tr.danger > td,
+.table > thead > tr.danger > th, table > thead > tr.danger > th,
+.table > tbody > tr > td.danger, table > tbody > tr > td.danger,
+.table > tbody > tr > th.danger, table > tbody > tr > th.danger,
+.table > tbody > tr.danger > td, table > tbody > tr.danger > td,
+.table > tbody > tr.danger > th, table > tbody > tr.danger > th,
+.table > tfoot > tr > td.danger, table > tfoot > tr > td.danger,
+.table > tfoot > tr > th.danger, table > tfoot > tr > th.danger,
+.table > tfoot > tr.danger > td, table > tfoot > tr.danger > td,
+.table > tfoot > tr.danger > th, table > tfoot > tr.danger > th {
   background-color: #f2dede; }
 
 .table-hover > tbody > tr > td.danger:hover,
@@ -5113,10 +5046,8 @@ tbody.collapse.in {
     -webkit-border-radius: 4px;
     border-radius: 4px; }
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
-  .nav-tabs-justified > .active > a:hover,
-  .nav-tabs.nav-justified > .active > a:hover,
-  .nav-tabs-justified > .active > a:focus,
-  .nav-tabs.nav-justified > .active > a:focus {
+  .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
     border: 1px solid #ddd; }
   @media (min-width: 768px) {
     .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
@@ -5124,10 +5055,8 @@ tbody.collapse.in {
       -webkit-border-radius: 4px 4px 0 0;
       border-radius: 4px 4px 0 0; }
     .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
-    .nav-tabs-justified > .active > a:hover,
-    .nav-tabs.nav-justified > .active > a:hover,
-    .nav-tabs-justified > .active > a:focus,
-    .nav-tabs.nav-justified > .active > a:focus {
+    .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
+    .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
       border-bottom-color: #fff; } }
 
 .tab-content > .tab-pane {
@@ -11213,14 +11142,14 @@ http://flickity.metafizzy.co
 /*
 	_style.css
 */
-.fuller, .claf, [data-flicker]:before, .pagination-div .pagination li:before, html body .tp-bullets.simplebullets.round .bullet:before, .menu ul:not([class*="sub-menu"]) > li:before, .cell-hover, .hover-content .cell-hover, .min-menu-header .wrapper-bg, .rev-slider .wrapper-bg {
+.fuller, .claf, [data-flicker]:before, .pagination-div .pagination li:before, html body .tp-bullets.simplebullets.round .bullet:before, .menu ul:not([class*="sub-menu"]) > li:before, .short-carpets .scroll-mouse .img-content:before, .short-carpets .scroll-mouse .img-content:after, .cell-hover, .hover-content .cell-hover, .min-menu-header .wrapper-bg, .rev-slider .wrapper-bg {
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0; }
 
-.claf, [data-flicker]:before, .pagination-div .pagination li:before, html body .tp-bullets.simplebullets.round .bullet:before, .menu ul:not([class*="sub-menu"]) > li:before {
+.claf, [data-flicker]:before, .pagination-div .pagination li:before, html body .tp-bullets.simplebullets.round .bullet:before, .menu ul:not([class*="sub-menu"]) > li:before, .short-carpets .scroll-mouse .img-content:before, .short-carpets .scroll-mouse .img-content:after {
   content: ""; }
 
 .clafclear {
@@ -12498,9 +12427,9 @@ a[target="_blank"] {
       -o-transition: transform 0.8s ease;
       transition: transform 0.8s ease;
       transition: transform 0.8s ease, -webkit-transform 0.8s ease;
-      -webkit-transform: rotateZ(45deg) scale(0.7);
-      -ms-transform: rotate(45deg) scale(0.7);
-      transform: rotateZ(45deg) scale(0.7);
+      -webkit-transform: rotateZ(45deg) scale(0.8);
+      -ms-transform: rotate(45deg) scale(0.8);
+      transform: rotateZ(45deg) scale(0.8);
       -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
@@ -12509,9 +12438,9 @@ a[target="_blank"] {
     .rev-slider .slide-carpet:hover {
       z-index: 1 !important; }
       .rev-slider .slide-carpet:hover img {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1); }
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05); }
   @media (max-width: 991px) {
     .rev-slider {
       text-align: center; }
@@ -12554,23 +12483,49 @@ a[target="_blank"] {
 .entry-header p {
   line-height: 200%; }
 
+.short-carpets figure .img {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px; }
+
+.short-carpets figure a:focus {
+  outline: 0; }
+
+.short-carpets .carpets-carousel {
+  padding: 120px 0; }
+
+.short-carpets .scroll-mouse .img-content {
+  position: relative; }
+  .short-carpets .scroll-mouse .img-content:before, .short-carpets .scroll-mouse .img-content:after {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 48%;
+    top: 50%; }
+  .short-carpets .scroll-mouse .img-content:after {
+    right: 0;
+    left: unset; }
+
 .carpets-carousel .flickity-slider {
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear; }
 
-.carpets-carousel .carousel-items {
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+.carpets-carousel .carousel-wrapper {
+  -webkit-transition: -webkit-transform 3s cubic-bezier(0, 0, 0.2, 1);
+  transition: -webkit-transform 3s cubic-bezier(0, 0, 0.2, 1);
+  -o-transition: transform 3s cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 3s cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 3s cubic-bezier(0, 0, 0.2, 1);
   white-space: nowrap; }
 
-.carpets-carousel figure {
+.carpets-carousel li {
   display: inline-block;
-  width: 150px;
   margin: 0 15px; }
+
+.carpets-carousel figure {
+  width: 200px; }
   .carpets-carousel figure .img {
-    height: 200px;
+    background-color: #14142a;
+    height: 250px;
     background-position: center; }
 
 /*
