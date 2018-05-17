@@ -91,14 +91,46 @@
       x3: 30
     };
 
-    if ($(".short-partners-carousel .carousel-items figure").length > 4)
-      $('.short-partners-carousel .carousel-items').flickity({
+    // if ($(".short-partners-carousel .carousel-items figure").length > 4)
+    //   $('.short-partners-carousel .carousel-items').flickity({
+    //     imagesLoaded: true,
+    //     autoPlay: false,
+    //     pauseAutoPlayOnHover: true,
+    //     arrowShape: arrowStyle,
+    //     initialIndex: 2,
+    //     prevNextButtons: true,
+    //     draggable: true,
+    //     wrapAround: true,
+    //     pageDots: false,
+    //     contain: false,
+    //     percentPosition: true,
+    //     cellAlign: 'center'
+    //   });
+    // if ($(".short-projects-carousel .carousel-items figure").length > 4)
+    //   $('.short-projects-carousel .carousel-items').flickity({
+    //     imagesLoaded: true,
+    //     autoPlay: 3000,
+    //     pauseAutoPlayOnHover: true,
+    //     arrowShape: arrowStyle,
+    //     initialIndex: 1,
+    //     prevNextButtons: true,
+    //     draggable: true,
+    //     wrapAround: true,
+    //     pageDots: false,
+    //     contain: false,
+    //     percentPosition: true,
+    //     cellAlign: 'left'
+    //   });
+    
+    function carpetsVerticalCarousel(){
+
+      var $carousel = $('.carpets-vertical-carousel .carousel').flickity({
         imagesLoaded: true,
         autoPlay: false,
         pauseAutoPlayOnHover: true,
         arrowShape: arrowStyle,
-        initialIndex: 2,
-        prevNextButtons: true,
+        initialIndex: 1,
+        prevNextButtons: false,
         draggable: true,
         wrapAround: true,
         pageDots: false,
@@ -106,23 +138,35 @@
         percentPosition: true,
         cellAlign: 'center'
       });
-    if ($(".short-projects-carousel .carousel-items figure").length > 4)
-      $('.short-projects-carousel .carousel-items').flickity({
-        imagesLoaded: true,
-        autoPlay: 3000,
-        pauseAutoPlayOnHover: true,
-        arrowShape: arrowStyle,
-        initialIndex: 1,
-        prevNextButtons: true,
-        draggable: true,
-        wrapAround: true,
-        pageDots: false,
-        contain: false,
-        percentPosition: true,
-        cellAlign: 'left'
-      });
-    
+      var $carouselNav = $('.carpets-vertical-carousel .carousel-nav');
+      var $carouselNavCells = $carouselNav.find('.carousel-cell');
 
+      $carouselNav.on( 'click', '.carousel-cell', function( event ) {
+        var index = $( event.currentTarget ).index();
+        $carousel.flickity( 'select', index );
+      });
+
+      var flkty = $carousel.data('flickity');
+      var navTop  = $carouselNav.position().top;
+      var navCellHeight = $carouselNavCells.height();
+      var navHeight = $carouselNav.height();
+
+      $carousel.on( 'select.flickity', function() {
+        // set selected nav cell
+        $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
+        var $selected = $carouselNavCells.eq( flkty.selectedIndex )
+          .addClass('is-nav-selected');
+        // scroll nav
+        var scrollY = $selected.position().top +
+          $carouselNav.scrollTop() - ( navHeight + navCellHeight ) / 2;
+        $carouselNav.animate({
+          //scrollTop: scrollY
+        });
+
+      });
+    }
+    if( $('.carpets-vertical-carousel').length !=  0)
+      carpetsVerticalCarousel();
 
     function carpetsCarousel(){
       var itemsWidth = 0;
@@ -241,9 +285,9 @@
     $(window).on("mousewheel", function(event) {
       if (!headerRange) return;
       if (event.originalEvent.wheelDelta >= 0) {
-        minMenu.removeClass("up");
+        //minMenu.removeClass("up");
       } else {
-        minMenu.addClass("up");
+        //minMenu.addClass("up");
       }
     });
 
@@ -349,7 +393,7 @@
           keyboardNavigation: "off",
 
           navigationType: "bullet",
-          navigationArrows: "solo", //solo
+          navigationArrows: "solo",
           navigationStyle: "round",
 
           navigationHAlign: "center",
