@@ -13,12 +13,15 @@
       delay: 150
     });
     setTimeout(function() { AOS.refresh(); }, 1000);
-
+      // SKROLLR
+  if( !isMobile ){
     skrollr.init({
       smoothScrolling: false,
       forceHeight: false,
       mobileDeceleration: 0.004
     });
+  }
+
 
     //--MMENU
     $("#min-menu").mmenu({
@@ -121,26 +124,9 @@
     
 
 
-    // $('.carpets-carousel .carousel-items').flickity({
-    //   imagesLoaded: true,
-    //   autoPlay: false,
-    //   pauseAutoPlayOnHover: false,
-    //   arrowShape: arrowStyle,
-    //   initialIndex: 1,
-    //   prevNextButtons: false,
-    //   draggable: false,
-    //   wrapAround: false,
-    //   pageDots: false,
-    //   freeScroll: true,
-    //   contain: true,
-    //   percentPosition: true,
-    //   cellAlign: 'center'
-    // });
     function carpetsCarousel(){
-
-
       var itemsWidth = 0;
-      var carousel = $(".carpets-carousel");
+      var carousel = $(".short-carpets-carousel");
       var carouselWidth = carousel.width();
       var carouselWidthPersent = 100/carouselWidth;
 
@@ -148,24 +134,17 @@
         itemsWidth += ($(el).outerWidth()+35);
         console.log( itemsWidth )
       })
-      $(".carpets-carousel .carousel-wrapper").css({
-        width: itemsWidth+"px"
-      })
-      
-      $(".carpets-carousel").on("mousemove", function(e){
+      carousel.find(".carousel-wrapper").css({ width: itemsWidth+"px" })
+      carousel.on("mousemove", function(e){
         var offset = (itemsWidth - carouselWidth)*100/itemsWidth;
         var mouseX = e.clientX;
-
         var mousePersent =  -(roundFix((offset/94)*(carouselWidthPersent*mouseX), 3)-1)
-        //console.log( mousePersent, carouselWidth, offset )
-        //console.log( (-offset), mousePersent, (100/offset) )
-        $(".carousel-wrapper").css({'transform': 'translateX('+mousePersent+'%)'})
+        carousel.find(".carousel-wrapper").css({'transform': 'translateX('+mousePersent+'%)'})
         
       })
-      
-
     }
-    carpetsCarousel();
+    if( !checkSm() )
+        carpetsCarousel();
 
 
       $('.short-reviews-carousel .carousel-items').flickity({
@@ -191,48 +170,43 @@
         afterShow: function(instance, current) {},
         transitionEffect: "zoom-in-out"
       });
-    $("[data-fancybox]").fancybox({
-      afterShow: function(instance, current) {
-        //jarticleCarousel.flickity("resize");
-      }
-    });
 
 
     window.carouselArticle = function() {
       if ($(".carousel-article").length >= 0) {
         var carouselMain = $(".carousel-article .carousel-main"),
           carouselNav = $(".carousel-article .carousel-nav");
-
         for (var i = 0; i < carouselMain.length; i++) {
-          var crs = $(carouselMain)
-            .eq(i)
-            .flickity({
+          var crs = $(carouselMain).eq(i).flickity({
               imagesLoaded: true,
               prevNextButtons: false,
               cellAlign: "center",
               bgLazyLoad: 1,
               //friction: 1,
               //selectedAttraction: 1,
-              initialIndex: 0,
+              initialIndex: 1,
               draggable: true,
               contain: true,
               pageDots: false
             });
           var flkty = crs.data("flickity");
-
-          $(carouselNav)
-            .eq(i)
-            .flickity({
+          var crsNav = $(carouselNav).eq(i).flickity({
               imagesLoaded: true,
               initialIndex: 0,
               asNavFor: $(carouselMain)[i],
-              prevNextButtons: true,
+              prevNextButtons: !checkSm(),
               draggable: true,
               cellAlign: "center",
               adaptiveHeight: true,
-              contain: true,
+              contain: false,
               pageDots: false
             });
+          $("[data-fancybox]").fancybox({
+            afterShow: function(instance, current) {
+              this.$content.find(".carousel-main").flickity("resize");
+              this.$content.find(".carousel-nav").flickity("resize");
+            }
+          });
         }
       }
     };

@@ -48,6 +48,7 @@ gulp.task('scripts', () =>
 	{	
 	return gulp.src([
 			app+'/js/jquery.min.js',
+			app+'/js/skrollr.min.js',
 			app+'/js/smoothscroll.js',
 			app+'/js/bootstrap.min.js',
 			//app+'/js/TweenMax.min.js',
@@ -59,7 +60,6 @@ gulp.task('scripts', () =>
 			//app+'/js/pana-accordion.js',
 			app+'/js/aos.js',
 			//app+'/js/wow.js',
-			app+'/js/skrollr.min.js',
 			//app+'/js/owl.carousel.min.js',
 			app+'/js/jquery.fancybox.js',
 			//app+'/js/jquery.jcarousel.js',
