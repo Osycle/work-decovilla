@@ -11756,8 +11756,7 @@ html body .tp-bullets.simplebullets.round .bullet {
       position: fixed; } }
 
 .header-hidden {
-  height: 60px;
-  display: none; }
+  height: 60px; }
   @media (max-width: 991px) {
     .header-hidden {
       height: 100px; } }
@@ -11776,8 +11775,10 @@ html body .tp-bullets.simplebullets.round .bullet {
   -ms-transform: unset;
   transform: unset;
   background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 5px solid #14142a;
   -webkit-box-shadow: 0 0 10px -5px black;
-  box-shadow: 0 0 10px -5px black; }
+  box-shadow: 0 0 10px -5px black;
+  background-image: url("../img/bg/bg-menu.jpg"); }
   .header-top-content p, .header-top-content strong {
     line-height: 140%; }
   .header-top-content .phones {
@@ -12391,7 +12392,11 @@ a[target="_blank"] {
 
 .rev-slider {
   -ms-touch-action: auto !important;
-  touch-action: auto !important; }
+  touch-action: auto !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover; }
   .rev-slider li > img {
     z-index: 2; }
   .rev-slider li {

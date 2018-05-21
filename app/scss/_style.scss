@@ -629,7 +629,7 @@ $header-min-menu: 100px;
 .header-hidden{
 	//position: relative;
 	height: $header-top-height;
-	display: none;
+	//display: none;
 	@media ( max-width: 991px ){
 		height: 100px;
 	}
@@ -640,9 +640,9 @@ $header-min-menu: 100px;
 	transform: none;
 	transform: unset;
 	background-color: rgba(white, 0.9);
-	//border-bottom: 5px solid $color-2;
+	border-bottom: 5px solid $color-2;
 	box-shadow: 0 0 10px -5px black;
-	//background-image: url('../img/bg/bg-menu.jpg');
+	background-image: url('../img/bg/bg-menu.jpg');
 	//clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 	p, strong{
 		line-height: 140%;
@@ -1416,6 +1416,9 @@ a[target="_blank"]{
 }
 .rev-slider{
 	touch-action: auto !important;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	li>img{
 		z-index: 2;
 	}
