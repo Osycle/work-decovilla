@@ -956,25 +956,15 @@ $header-min-menu: 100px;
 
 
 //MMENU
-.mm-navbar{
-	.close-btn{
-		width: 35px;
-		height: 35px;
-	}
-}
-.mm-listview{
-
-}
 .mm-slideout{
 	z-index: auto;
-}
-.mm-menu{
-
 }
 .mm-navbar{
 	position: relative;
 	.close-btn{
 		position: absolute;
+		width: 35px;
+		height: 35px;
 		top: 30px;
 		right: 20px;
 		pointer-events: auto;
