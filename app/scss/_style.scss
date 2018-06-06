@@ -1678,7 +1678,8 @@ a[target="_blank"]{
 }
 .short-carpets-carousel{
 	.carousel-wrapper{
-		transition: transform 3s cubic-bezier(0, 0, 0.2, 1); 
+		//transition: transform 0.8s ease-out; 
+		transition: transform 1.2s cubic-bezier(0, 0, 0.2, 1); 
 		white-space: nowrap;
 	}
 	li{

@@ -12047,10 +12047,6 @@ html body .tp-bullets.simplebullets.round .bullet {
   opacity: 0;
   top: -200px; }
 
-.mm-navbar .close-btn {
-  width: 35px;
-  height: 35px; }
-
 .mm-slideout {
   z-index: auto; }
 
@@ -12058,6 +12054,8 @@ html body .tp-bullets.simplebullets.round .bullet {
   position: relative; }
   .mm-navbar .close-btn {
     position: absolute;
+    width: 35px;
+    height: 35px;
     top: 30px;
     right: 20px;
     pointer-events: auto;
@@ -12540,11 +12538,11 @@ a[target="_blank"] {
     left: unset; }
 
 .short-carpets-carousel .carousel-wrapper {
-  -webkit-transition: -webkit-transform 3s cubic-bezier(0, 0, 0.2, 1);
-  transition: -webkit-transform 3s cubic-bezier(0, 0, 0.2, 1);
-  -o-transition: transform 3s cubic-bezier(0, 0, 0.2, 1);
-  transition: transform 3s cubic-bezier(0, 0, 0.2, 1);
-  transition: transform 3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 3s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0, 0, 0.2, 1);
+  transition: -webkit-transform 1.2s cubic-bezier(0, 0, 0.2, 1);
+  -o-transition: transform 1.2s cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 1.2s cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 1.2s cubic-bezier(0, 0, 0.2, 1), -webkit-transform 1.2s cubic-bezier(0, 0, 0.2, 1);
   white-space: nowrap; }
 
 .short-carpets-carousel li {
