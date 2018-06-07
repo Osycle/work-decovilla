@@ -347,7 +347,7 @@
 
 
 
-		var revSlider = $('.rev-slider') || null;
+		window.revSlider = $('.rev-slider') || null;
 		var bannerSlider = $('.rev-slider').hasClass("banner-slider") || null;
 
 		onResized(function() {
@@ -355,7 +355,7 @@
 				revSlider.revolution({
 					delay: 6000,
 					startwidth: checkSm() ? $(window).width() : checkMd() ? 970 : 1170,
-					startheight: checkSm() ? 450 : bannerSlider ? 400 : 615,
+					startheight: checkSm() ? 280 : bannerSlider ? 400 : 600,
 					autoHeight: "off",
 					fullScreenAlignForce: "off",
 
