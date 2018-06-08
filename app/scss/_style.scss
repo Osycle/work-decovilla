@@ -1468,28 +1468,11 @@ a[target="_blank"]{
 			margin-top: 30px;
 			width: 250px;
 		}
-
 	}
-/* 	@keyframes carpetAnim {
-		from{
-			clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 99%, 0 100%, 0% 70%, 0% 30%);
-		}
-		15%{
-			clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-		}
-		50%{
-			//clip-path: polygon(45% 45%, 70% 0%, 56% 48%, 100% 70%, 51% 61%, 30% 100%, 41% 56%, 0% 30%);
-			//clip-path: polygon(30% 0%, 63% 30%, 100% 30%, 75% 65%, 70% 100%, 34% 78%, 0% 70%, 25% 44%);
-			clip-path: polygon(50% 0, 50% 0, 100% 48%, 100% 48%, 53% 100%, 51% 100%, 0 49%, 0 49%);
-		}
-		to{
-			clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 99%, 0 100%, 0% 70%, 0% 30%);
-		}
-	} */
 	@keyframes carpetAnim {
 		from{
 			//clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 99%, 0 100%, 0% 70%, 0% 30%);
-			clip-path: polygon(50% 0, 50% 0, 100% 48%, 100% 48%, 53% 100%, 51% 100%, 0 49%, 0 49%);
+			clip-path: polygon(50% 0, 50% 0, 100% 48%, 100% 50%, 50% 100%, 50% 100%, 0 50%, 0 50%);
 		}
 		15%{
 			
@@ -1502,24 +1485,27 @@ a[target="_blank"]{
 			clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 99%, 0 100%, 0% 70%, 0% 30%);
 		}
 	}
-
-
 	.slide-carpet{
-		transition: all 0.0s ease-in-out 0.0s;
+		//transition: visibility 0.0s ease-in-out 5s;
 		z-index: unset;
-		//opacity:0;
+		opacity: 0;
 		.img-wrapper{
 			//clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 99%, 0 100%, 0% 70%, 0% 30%);
-			clip-path: polygon(50% 0, 50% 0, 100% 48%, 100% 48%, 53% 100%, 51% 100%, 0 49%, 0 49%);
-			transition: all 1.2s ease-in-out;
-			transform: scale(0.8);
+			clip-path: polygon(50% 0, 50% 0, 100% 48%, 100% 50%, 50% 100%, 50% 100%, 0 50%, 0 50%);
+			
+			transition: all 0.4s linear;
 			filter: brightness(90%);
+			//transition: all 0.3s ease-out 0.0s, visibility 0.0s ease 0.5s;
+    	transform: perspective(1800px) rotateY(-1deg) rotateX(5deg) scale(0.8);
 		}
 		&:hover{
+			z-index: 1;
 			.img-wrapper{
 				///animation: carpetAnim 1.2s ease-in-out 1;
 				filter: brightness(105%);
+				transition: all 0.8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 				clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 99%, 0 100%, 0% 70%, 0% 30%);
+				transform: scale(1);
 			}
 			.img{
 				box-shadow: inset -1px -1px 30px 1px black;
@@ -1531,18 +1517,18 @@ a[target="_blank"]{
 			height: $bg-size;
 			background-size: cover;
 			background-position: center;
-			transition: all 1s ease-in-out;
+			transition: all 0.5s ease-in-out;
 			//filter: drop-shadow(0 0 4px rgba(black, 0.5));
 			box-shadow: inset 0 0 150px 20px black;
 			transform-origin: 50% 50%;
 		}
-		&:hover{
-			z-index: 1 !important;
-			.img-wrapper{
-				transform: scale(1);
-			}
-		}
 
+	}
+	.is-selected{
+		.slide-carpet{
+			//transform: rotateY(45deg);
+			//opacity: 1 !important;
+		}
 	}
 	@media (min-width: 992px) {
 		.slide-header{
@@ -1577,6 +1563,7 @@ a[target="_blank"]{
 			text-align: center !important;
 			font-size: em(20, 16);
 		}
+
 	}
 
 	@media only screen and (max-width: 767px){
@@ -1686,6 +1673,9 @@ a[target="_blank"]{
 		color: $color-2;
 		line-height: 200%;		
 	}
+}
+.icons-tilmat{
+	width: 38px !important;
 }
 
 

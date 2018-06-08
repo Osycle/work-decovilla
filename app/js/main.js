@@ -425,6 +425,12 @@
 			$(".arrow-container.container").append(prevnext).css("top", "350");
 			$(".arrow-container.container").css("top", "-" + ($(".rev-slider").css("height").match(/(\d+)/gim)[0] / 2) + "px");
 		}
+		revSlider.on("revolution.slide.onchange",function (e, data) {
+		     var li = $(revSlider).find("ul li");
+		     li.removeClass("is-selected");
+		     li.eq(data.slideIndex-1).addClass("is-selected")
+		     console.log(  li.eq(data.slideIndex) )
+		});
 
 
 
