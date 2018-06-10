@@ -5,7 +5,7 @@
 
 
 
-		//--AOS
+		// --AOS
 		AOS.init({
 			offset: 100,
 			once: true,
@@ -13,7 +13,7 @@
 			delay: 150
 		});
 		setTimeout(function() { AOS.refresh(); }, 1000);
-			// SKROLLR
+		// --SKROLLR
 	if( !isMobile ){
 		skrollr.init({
 			smoothScrolling: false,
@@ -23,7 +23,7 @@
 	}
 
 
-		//--MMENU
+		// --MMENU
 		$("#min-menu").mmenu({
 			extensions: [
 				"pagedim-black", // wrapper-bg black
@@ -53,7 +53,7 @@
 			]
 		}, {});
 
-		//--Flikity Carousel
+		// --Flikity Carousel
 		function flickityPrevNext(className) {
 			var carouselWrapper =   $(className);
 			var carousel =          carouselWrapper.find(".carousel-items");
@@ -187,13 +187,14 @@
 		$(".short-carpets-carousel .hover-content a").on("click", function(){
 			var carpetsTabTop = $(".carpets-tab-items").offset().top
     	$("html").animate({
-    	    scrollTop: !checkSm() ?  carpetsTabTop-80 : carpetsTabTop+500
+    	    scrollTop: !checkSm() ?  carpetsTabTop-310 : carpetsTabTop+500
     	}, 500)
 
 		})
 		// FANCYBOX
 		if ($("[data-fancybox='gallery']").length != 0)
 			$("[data-fancybox='gallery']").fancybox({
+				loop: true,
 				afterShow: function(instance, current) {},
 				transitionEffect: "zoom-in-out"
 			});
