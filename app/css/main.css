@@ -12541,6 +12541,12 @@ a[target="_blank"] {
         text-align: center !important;
         font-size: 1.25em; } }
 
+.fancybox-slide-carpet {
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 /* clear fix */
 .grid-img:after {
   content: '';
