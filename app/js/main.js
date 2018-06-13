@@ -186,24 +186,15 @@
           //autoStart : true,
         },
         fitToView: false, // avoids scaling the image to fit in the viewport
-        beforeShow: function(instance, current) {
+        onInit: function(instance, current) {
           var that = this;
-          console.log(this);
+          console.log(this, instance);
           //$(that.$image).hide();
-          that.$slide.css({
-      			"background-image": "url("+that.src+")"
-    			})
+       //    that.$slide.css({
+      	// 		"background-image": "url("+that.src+")"
+    			// })
         },
         slideClass: 'fancybox-slide-carpet',
-        afterShow: function(instance, current) {
-          //console.log(this);
-          var that = this;
-          console.log(this);
-          //$(that.$image).hide();
-          that.$slide.css({
-      			"background-image": "url("+that.src+")"
-    			})
-        },
         transitionEffect: "zoom-in-out"
       });
     console.log($(".fancybox-image").closest(".fancybox-slide"))
