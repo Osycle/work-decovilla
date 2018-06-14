@@ -357,7 +357,7 @@
         revSlider.revolution({
           delay: 6000,
           startwidth: checkSm() ? $(window).width() : checkMd() ? 970 : 1170,
-          startheight: checkSm() ? 280 : bannerSlider ? 400 : 600,
+          startheight: checkSm() ? 280 : bannerSlider ? 400 : 500,
           autoHeight: "off",
           fullScreenAlignForce: "off",
           onHoverStop: "on",
