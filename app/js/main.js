@@ -77,7 +77,7 @@
       x3: 30
     };
     //carpetsVerticalCarousel
-    function carpetsVerticalCarousel(crs, f) {
+    window.carpetsVerticalCarousel = function(crs, f){
       //if( !crs ) return;
       var $carousel = crs.find('.carousel').flickity({
         imagesLoaded: true,
@@ -95,33 +95,34 @@
         percentPosition: true,
         cellAlign: 'center'
       });
-      if ($carousel.length === 0)
+      if( $carousel.length === 0 ) 
         return;
+      console.log( $carousel );
       var $carouselNav = crs.find('.carousel-nav') || null;
       var $carouselNavCells = $carouselNav.find('.carousel-cell');
-      $carouselNav.on('click', '.carousel-cell', function(event) {
-        var index = $(event.currentTarget).index();
-        $carousel.flickity('select', index);
+      $carouselNav.on( 'click', '.carousel-cell', function( event ) {
+        var index = $( event.currentTarget ).index();
+        $carousel.flickity( 'select', index );
       });
       var flkty = $carousel.data('flickity');
 
-      var navTop = $carouselNav.position().top;
+      var navTop  = $carouselNav.position().top;
       var navCellHeight = $carouselNavCells.height();
       var navHeight = $carouselNav.height();
-      $carousel.on('select.flickity', function() {
+      $carousel.on( 'select.flickity', function() {
         // set selected nav cell
         $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
-        var $selected = $carouselNavCells.eq(flkty.selectedIndex).addClass('is-nav-selected');
+        var $selected = $carouselNavCells.eq( flkty.selectedIndex ).addClass('is-nav-selected');
         // scroll nav
         var scrollY = $selected.position().top +
-          $carouselNav.scrollTop() - (navHeight + navCellHeight) / 2;
+          $carouselNav.scrollTop() - ( navHeight + navCellHeight ) / 2;
         $carouselNav.animate({
           //scrollTop: scrollY
         });
       });
       var tabId = $carousel.closest(".tab-pane").attr("id");
-      $('.short-carpets-carousel a[href="#' + tabId + '"]').on('show.bs.tab', function(e) {
-        setTimeout(function() {
+      $('.short-carpets-carousel a[href="#'+tabId+'"]').on('show.bs.tab', function (e) {
+        setTimeout(function(){
           $carousel.flickity("resize");
         }, 200)
       })
@@ -175,29 +176,51 @@
     // FANCYBOX
     if ($("[data-fancybox='gallery']").length != 0)
       $("[data-fancybox='gallery']").fancybox({
-        loop: false,
+        loop: true,
         image: {
-          // Wait for images to load before displaying
-          // Requires predefined image dimensions
-          // If 'auto' - will zoom in thumbnail if 'width' and 'height' attributes are found
+          // Дождитесь загрузки изображений перед отображением
+          // Требуется предопределенные размеры изображения
+          // Если «auto» - увеличивать эскиз, если атрибуты «ширина» и «высота»
           preload: true,
         },
         fullScreen: {
-          //autoStart : true,
+          autoStart : true,
         },
-        fitToView: false, // avoids scaling the image to fit in the viewport
-        onInit: function(instance, current) {
+        slideShow : {
+          autoStart : true,
+          speed     : 3500
+        },
+        autoFocus: true, // Старайтесь сосредоточиться на первом фокусируемом элементе после открытия
+        backFocus: true, // Поместите фокус обратно в активный элемент после закрытия
+        trapFocus: true, // Не позволяйте пользователю сосредоточиться на элементе вне модального контента
+        touch : false,
+        fitToView: true, // Избегает масштабирования изображения, чтобы оно соответствовало видовому экрану
+        afterShow: function(instance, current) {
           var that = this;
-          console.log(this, instance);
-          //$(that.$image).hide();
-       //    that.$slide.css({
-      	// 		"background-image": "url("+that.src+")"
-    			// })
+          var container = $(instance.$refs.container);
+          //console.log(instance.group, instance, container.find("*") );
+          $(container).find(".fancybox-slide").map(function(i, el){
+            el = $(el);
+            var src = el.find(".fancybox-image").attr("src");
+            el.css({
+              "background-image": "url("+src+")"
+            })
+          })
         },
-        slideClass: 'fancybox-slide-carpet',
-        transitionEffect: "zoom-in-out"
+        beforeShow: function(instance, current){
+          var that = this;
+          var container = $(instance.$refs.container);
+          console.log(instance);
+        },
+        animationEffect : "none",
+        // Значение хеширования при инициализации вручную,
+        // установить `false`, чтобы отключить хэш-изменение
+        hash: false,
+        transitionDuration : 0,
+        //transitionEffect: "zoom-in-out",
+        slideClass: 'fancybox-slide-carpet'
       });
-    console.log($(".fancybox-image").closest(".fancybox-slide"))
+    
 
 
     //carouselArticle
