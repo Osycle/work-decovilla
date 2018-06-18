@@ -1,0 +1,214 @@
+@import "variables";
+
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('#{$icomoon-font-path}/icomoon.ttf?8t666e') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?8t666e') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?8t666e#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ls-"], [class*=" ls-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.ls-avatar {
+  &:before {
+    content: unicode($ls-avatar); 
+  }
+}
+.ls-clock {
+  &:before {
+    content: unicode($ls-clock); 
+  }
+}
+.ls-credit-card .path1 {
+  &:before {
+    content: unicode($ls-credit-card-path1);  
+  }
+}
+.ls-credit-card .path2 {
+  &:before {
+    content: unicode($ls-credit-card-path2);  
+    margin-left: -1em;  
+  }
+}
+.ls-diamond {
+  &:before {
+    content: unicode($ls-diamond); 
+  }
+}
+.ls-envelope {
+  &:before {
+    content: unicode($ls-envelope); 
+  }
+}
+.ls-facebook {
+  &:before {
+    content: unicode($ls-facebook);     
+  }
+}
+.ls-guarantee .path1 {
+  &:before {
+    content: unicode($ls-guarantee-path1);  
+  }
+}
+.ls-guarantee .path2 {
+  &:before {
+    content: unicode($ls-guarantee-path2);  
+    margin-left: -1em;  
+  }
+}
+.ls-guarantee .path3 {
+  &:before {
+    content: unicode($ls-guarantee-path3);  
+    margin-left: -1em;  
+  }
+}
+.ls-guarantee .path4 {
+  &:before {
+    content: unicode($ls-guarantee-path4);  
+    margin-left: -1em;  
+  }
+}
+.ls-instagram {
+  &:before {
+    content: unicode($ls-instagram);     
+  }
+}
+.ls-like {
+  &:before {
+    content: unicode($ls-like); 
+  }
+}
+.ls-ok {
+  &:before {
+    content: unicode($ls-ok);     
+  }
+}
+.ls-phone-call {
+  &:before {
+    content: unicode($ls-phone-call); 
+  }
+}
+.ls-placeholder {
+  &:before {
+    content: unicode($ls-placeholder); 
+  }
+}
+.ls-security {
+  &:before {
+    content: unicode($ls-security); 
+  }
+}
+.ls-shopping-bag {
+  &:before {
+    content: unicode($ls-shopping-bag); 
+  }
+}
+.ls-telegram {
+  &:before {
+    content: unicode($ls-telegram);     
+  }
+}
+.ls-truck .path1 {
+  &:before {
+    content: unicode($ls-truck-path1);  
+  }
+}
+.ls-truck .path2 {
+  &:before {
+    content: unicode($ls-truck-path2);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path3 {
+  &:before {
+    content: unicode($ls-truck-path3);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path4 {
+  &:before {
+    content: unicode($ls-truck-path4);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path5 {
+  &:before {
+    content: unicode($ls-truck-path5);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path6 {
+  &:before {
+    content: unicode($ls-truck-path6);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path7 {
+  &:before {
+    content: unicode($ls-truck-path7);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path8 {
+  &:before {
+    content: unicode($ls-truck-path8);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path9 {
+  &:before {
+    content: unicode($ls-truck-path9);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path10 {
+  &:before {
+    content: unicode($ls-truck-path10);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path11 {
+  &:before {
+    content: unicode($ls-truck-path11);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path12 {
+  &:before {
+    content: unicode($ls-truck-path12);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path13 {
+  &:before {
+    content: unicode($ls-truck-path13);  
+    margin-left: -1em;  
+  }
+}
+.ls-truck .path14 {
+  &:before {
+    content: unicode($ls-truck-path14);  
+    margin-left: -1em;  
+  }
+}
+

@@ -11210,6 +11210,141 @@ http://flickity.metafizzy.co
 .flickity-page-dots .dot.is-selected {
   opacity: 1; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../icomoon/fonts/icomoon.ttf?8t666e") format("truetype"), url("../icomoon/fonts/icomoon.woff?8t666e") format("woff"), url("../icomoon/fonts/icomoon.svg?8t666e#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="ls-"], [class*=" ls-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.ls-avatar:before {
+  content: "\e900"; }
+
+.ls-clock:before {
+  content: "\e901"; }
+
+.ls-credit-card .path1:before {
+  content: "\e902"; }
+
+.ls-credit-card .path2:before {
+  content: "\e903";
+  margin-left: -1em; }
+
+.ls-diamond:before {
+  content: "\e904"; }
+
+.ls-envelope:before {
+  content: "\e905"; }
+
+.ls-facebook:before {
+  content: "\e906"; }
+
+.ls-guarantee .path1:before {
+  content: "\e907"; }
+
+.ls-guarantee .path2:before {
+  content: "\e908";
+  margin-left: -1em; }
+
+.ls-guarantee .path3:before {
+  content: "\e909";
+  margin-left: -1em; }
+
+.ls-guarantee .path4:before {
+  content: "\e90a";
+  margin-left: -1em; }
+
+.ls-instagram:before {
+  content: "\e90b"; }
+
+.ls-like:before {
+  content: "\e90c"; }
+
+.ls-ok:before {
+  content: "\e90d"; }
+
+.ls-phone-call:before {
+  content: "\e90e"; }
+
+.ls-placeholder:before {
+  content: "\e90f"; }
+
+.ls-security:before {
+  content: "\e910"; }
+
+.ls-shopping-bag:before {
+  content: "\e911"; }
+
+.ls-telegram:before {
+  content: "\e912"; }
+
+.ls-truck .path1:before {
+  content: "\e913"; }
+
+.ls-truck .path2:before {
+  content: "\e914";
+  margin-left: -1em; }
+
+.ls-truck .path3:before {
+  content: "\e915";
+  margin-left: -1em; }
+
+.ls-truck .path4:before {
+  content: "\e916";
+  margin-left: -1em; }
+
+.ls-truck .path5:before {
+  content: "\e917";
+  margin-left: -1em; }
+
+.ls-truck .path6:before {
+  content: "\e918";
+  margin-left: -1em; }
+
+.ls-truck .path7:before {
+  content: "\e919";
+  margin-left: -1em; }
+
+.ls-truck .path8:before {
+  content: "\e91a";
+  margin-left: -1em; }
+
+.ls-truck .path9:before {
+  content: "\e91b";
+  margin-left: -1em; }
+
+.ls-truck .path10:before {
+  content: "\e91c";
+  margin-left: -1em; }
+
+.ls-truck .path11:before {
+  content: "\e91d";
+  margin-left: -1em; }
+
+.ls-truck .path12:before {
+  content: "\e91e";
+  margin-left: -1em; }
+
+.ls-truck .path13:before {
+  content: "\e91f";
+  margin-left: -1em; }
+
+.ls-truck .path14:before {
+  content: "\e920";
+  margin-left: -1em; }
+
 /*
 	_style.css
 */
@@ -12937,6 +13072,9 @@ a[target="_blank"] {
   color: white;
   min-height: 150px;
   line-height: 170%; }
+  #footer h4 {
+    font-weight: 500;
+    margin: 0; }
 
 .footer-logo {
   position: absolute;
@@ -12958,16 +13096,19 @@ a[target="_blank"] {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  padding: 0 10px; }
+  padding: 0 10px;
+  font-weight: 400; }
   .footer-socicons li a {
-    -webkit-filter: brightness(0%) invert(30%) sepia();
-    filter: brightness(0%) invert(30%) sepia(); }
+    color: rgba(0, 0, 0, 0.2);
+    -webkit-filter: invert(1);
+    filter: invert(1); }
     .footer-socicons li a:hover {
-      -webkit-filter: brightness(0%) invert(80%) sepia();
-      filter: brightness(0%) invert(80%) sepia(); }
+      -webkit-filter: invert(0);
+      filter: invert(0);
+      color: #fecd75; }
 
 .footer-socicons i {
-  font-size: 20px; }
+  font-size: 30px; }
 
 @media (max-width: 991px) {
   .footer-socicons {
@@ -12996,6 +13137,14 @@ a[target="_blank"] {
 
 .footer-contacts {
   font-size: 0.9em; }
+  @media (min-width: 992px) {
+    .footer-contacts figure .img-content, .footer-contacts figure .desc-content {
+      display: inline-block;
+      vertical-align: top; }
+    .footer-contacts figure:nth-child(2) {
+      padding-left: 60px; }
+    .footer-contacts figure .desc-content {
+      max-width: 320px; } }
 
 /*
 		_helper.scss	
