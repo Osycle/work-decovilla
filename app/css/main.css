@@ -6553,10 +6553,10 @@ label {
   color: #14142a; }
 
 .color-3 {
-  color: #2983f6; }
+  color: #13152A; }
 
 .color-4 {
-  color: #043068; }
+  color: black; }
 
 [class*="hover-color"] a, .hover-underline a {
   -webkit-transition: all 0.3s ease;
@@ -6570,10 +6570,10 @@ label {
   color: #14142a; }
 
 .hover-color-3 a:hover {
-  color: #2983f6; }
+  color: #13152A; }
 
 .hover-color-4 a:hover {
-  color: #043068; }
+  color: black; }
 
 .hover-underline a:hover {
   text-decoration: underline; }
@@ -6603,10 +6603,10 @@ label {
   background-color: #14142a; }
 
 .bg-color-3 {
-  background-color: #2983f6; }
+  background-color: #13152A; }
 
 .bg-color-4 {
-  background-color: #043068; }
+  background-color: black; }
 
 .text-indent {
   text-indent: 30px; }
@@ -11532,7 +11532,7 @@ http://flickity.metafizzy.co
     .hover-content .cell-hover.bg-color-2 {
       background-color: rgba(20, 20, 42, 0.5); }
     .hover-content .cell-hover.bg-color-3 {
-      background-color: rgba(41, 131, 246, 0.5); }
+      background-color: rgba(19, 21, 42, 0.5); }
     .hover-content .cell-hover > div {
       width: 100%; }
   .hover-content:hover .cell-hover {
@@ -11563,7 +11563,7 @@ http://flickity.metafizzy.co
     vertical-align: middle; }
 
 .btn-def, .btn-icon {
-  color: white;
+  color: #13152A;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -11575,8 +11575,8 @@ http://flickity.metafizzy.co
     background-color: #14142a;
     color: white; }
   .btn-def.radius, .btn-icon.radius {
-    -webkit-border-radius: 20px;
-    border-radius: 20px; }
+    -webkit-border-radius: 10px;
+    border-radius: 10px; }
   .btn-def.reverse:not([class*="bg-color"]), .btn-icon.reverse:not([class*="bg-color"]) {
     background-color: #14142a; }
   .btn-def.reverse:hover, .btn-icon.reverse:hover {
@@ -11683,8 +11683,8 @@ http://flickity.metafizzy.co
   .tp-form-control:focus {
     border-color: #f3c36f;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 48, 104, 0.8);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 48, 104, 0.8); }
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.8); }
   .tp-form-control[disabled] {
     cursor: not-allowed; }
   .tp-form-control::-moz-placeholder {
@@ -11714,7 +11714,7 @@ http://flickity.metafizzy.co
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
   .tparrows:hover svg {
-    fill: #2983f6; }
+    fill: #13152A; }
 
 html body .tp-bullets.simplebullets.round .bullet {
   background-image: none;
@@ -12488,6 +12488,10 @@ body, #page {
   background-position: 50% top;
   -webkit-background-size: cover;
   background-size: cover; }
+  .main-content p, .main-content h2, .main-content h3, .main-content h4, .main-content h5 {
+    color: #13152A; }
+  .main-content .color-black {
+    color: #13152A; }
   @media (max-width: 991px) {
     .main-content {
       text-align: center; } }
@@ -12774,9 +12778,6 @@ a[target="_blank"] {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  .short-carpets figure .img {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px; }
   .short-carpets figure a:focus {
     outline: 0; }
   .short-carpets figure:hover {
@@ -12813,8 +12814,12 @@ a[target="_blank"] {
   width: 170px; }
 
 .short-carpets-carousel figure .img {
-  background-color: #14142a;
+  background-color: transparent;
   height: 250px;
+  -webkit-filter: drop-shadow(0 0 3px black);
+  filter: drop-shadow(0 0 3px black);
+  -webkit-background-size: contain;
+  background-size: contain;
   background-position: center; }
 
 @media (max-width: 991px) {
@@ -12901,14 +12906,13 @@ a[target="_blank"] {
   -ms-transform: unset;
   transform: unset; }
 
+.product-item h2 {
+  font-weight: 600; }
+
 .product-item table {
   text-align: left; }
   .product-item table tbody tr {
-    border-bottom: 1px solid black;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    border-bottom: 1px solid transparent;
     min-height: 75px;
     background-color: transparent; }
     .product-item table tbody tr:first-child {

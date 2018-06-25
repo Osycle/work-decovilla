@@ -173,7 +173,7 @@
 
 .btn-def, .btn-icon{
 	@extend .btn-style;
-	color: white;
+	color: $color-3;
 	transition: all 0.3s ease-in-out;
 	*{
 		color: inherit;
@@ -186,7 +186,7 @@
 		color: white;
 	}
 	&.radius{
-		border-radius: 20px;
+		border-radius: 10px;
 	}
 	&.reverse{
 		&:not([class*="bg-color"]){
@@ -1347,7 +1347,6 @@ main{
 	p{
 		line-height: 170%;
 	}
-
 }
 hr{
 	border-color: rgba( white, 0.2 );
@@ -1363,6 +1362,12 @@ body, #page{
 	background-image: url('../img/bg/bg-carpet.jpg');
 	background-position: 50% top;
 	background-size: cover;
+	p, h2,h3,h4,h5{
+		color: #13152A;
+	}
+	.color-black{
+		color: #13152A;	
+	}
 	@media (max-width: 991px){
 		text-align: center ;
 	}
@@ -1751,9 +1756,6 @@ a[target="_blank"]{
 .short-carpets{
 	figure{
 		transition: all 0.3s ease-in-out;
-		.img{
-			box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px;
-		}
 		a{
 			&:focus{
 				outline: 0;
@@ -1797,8 +1799,10 @@ a[target="_blank"]{
 	}
 	figure{		
 		.img{
-			background-color: $color-2;
+			background-color: transparent;
 			height: 250px;
+			filter: drop-shadow(0 0 3px black);
+			background-size: contain;
 			background-position: center;
 		}
 	}
@@ -1907,13 +1911,15 @@ a[target="_blank"]{
 	}
 }
 .product-item{
-
+	h2{
+		font-weight: 600;
+	}
 	table{
 		text-align:left;
 		tbody{
 			tr{
-				border-bottom: 1px solid black;
-				display: flex;
+				border-bottom: 1px solid transparent;
+				//display: flex;
 				min-height: 75px;
 				background-color: transparent;
 				&:first-child{
