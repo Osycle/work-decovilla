@@ -6541,7 +6541,7 @@ label {
   color: white; }
 
 .color-black {
-  color: #000; }
+  color: #13152A; }
 
 .color-gray {
   color: #727272; }
@@ -11744,6 +11744,9 @@ html body .tp-bullets.simplebullets.round .bullet {
     font-size: 0.9em;
     top: 100%; }
 
+.fancybox-slide {
+  color: #13152A; }
+
 [data-fancybox] {
   display: block;
   position: relative;
@@ -12187,6 +12190,12 @@ html body .tp-bullets.simplebullets.round .bullet {
         outline: none; }
   .min-menu-header .icon-bar {
     background-color: #f3c36f; }
+  .min-menu-header .lang {
+    color: #f3c36f;
+    font-size: 1.2em;
+    padding: 30px 0; }
+    .min-menu-header .lang .active {
+      color: black; }
 
 .mm-opening .min-menu-header {
   opacity: 0;
@@ -12225,6 +12234,27 @@ html body .tp-bullets.simplebullets.round .bullet {
     filter: drop-shadow(0 -5px 1px #f1b957);
     width: 110px;
     margin-top: 15px; }
+
+.lang-select {
+  color: #f3c36f;
+  width: 100%; }
+  .lang-select .lang-btn {
+    font-size: 45px;
+    padding: 15px 0; }
+  .lang-select #land-list-input:checked ~ .lang-list {
+    display: block; }
+  .lang-select .lang-list {
+    position: absolute;
+    display: none;
+    text-transform: uppercase;
+    width: 200px;
+    font-size: 1.5em;
+    top: 90px;
+    background-color: white; }
+  .lang-select li a {
+    border-bottom: 1px solid #efefef;
+    display: block;
+    padding: 10px 15px; }
 
 .search-nav-content {
   position: relative; }
@@ -12488,7 +12518,7 @@ body, #page {
   background-position: 50% top;
   -webkit-background-size: cover;
   background-size: cover; }
-  .main-content p, .main-content h2, .main-content h3, .main-content h4, .main-content h5 {
+  .main-content p, .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5 {
     color: #13152A; }
   .main-content .color-black {
     color: #13152A; }
@@ -12692,12 +12722,13 @@ a[target="_blank"] {
       text-align: center; }
       .rev-slider .slide-header {
         width: 100%;
-        -webkit-transform: translateY(50%) !important;
-        -ms-transform: translateY(50%) !important;
-        transform: translateY(50%) !important;
+        top: 50% !important;
+        -webkit-transform: translateY(-55%) !important;
+        -ms-transform: translateY(-55%) !important;
+        transform: translateY(-55%) !important;
         left: 0 !important; }
         .rev-slider .slide-header img {
-          display: none; }
+          width: 120px; }
       .rev-slider .slide-carpet {
         display: none; }
       .rev-slider p {
