@@ -2295,11 +2295,6 @@ a[target="_blank"]{
 }
 .footer-contacts{
 	font-size: 0.9em;
-	figure{
-
-
-
-	}
 	@media (min-width:992px) {
 		figure{
 			.img-content, .desc-content{
@@ -2315,8 +2310,13 @@ a[target="_blank"]{
 		}
 		
 	}
-}
 
+}
+@media (max-width:991px) {
+	html .footer-contacts{
+		margin-top: 110px;
+	}
+}
 
 
 

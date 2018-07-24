@@ -13181,6 +13181,10 @@ a[target="_blank"] {
     .footer-contacts figure .desc-content {
       max-width: 320px; } }
 
+@media (max-width: 991px) {
+  html .footer-contacts {
+    margin-top: 110px; } }
+
 /*
 		_helper.scss	
 */
