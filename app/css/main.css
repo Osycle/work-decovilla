@@ -12141,10 +12141,26 @@ html body .tp-bullets.simplebullets.round .bullet {
     transform: matrix(1, 0, 0, 1, 10, 0); }
 
 #min-menu {
-  -webkit-background-size: 600px 600px;
-  background-size: 600px;
-  background-position: right;
+  background-image: url("../img/bg/bg-carpet.jpg");
+  -webkit-background-size: 920px 920px;
+  background-size: 920px;
+  background-position: 0 0;
   color: white; }
+  #min-menu * {
+    color: #13152A; }
+  #min-menu * {
+    border-color: transparent;
+    background-image: unset;
+    background-color: transparent; }
+  #min-menu .mm-next:after {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-color: #13152A; }
+  #min-menu .mm-prev:before {
+    border-color: #13152A; }
+  #min-menu .mm-subopened .mm-next:after {
+    border-color: rgba(255, 255, 255, 0); }
 
 @-webkit-keyframes bgScroll {
   to {
@@ -12171,10 +12187,10 @@ html body .tp-bullets.simplebullets.round .bullet {
   height: 100px;
   padding: 10px 25px;
   z-index: 100;
-  color: white;
   -webkit-box-shadow: 0 0 20px 0 black;
   box-shadow: 0 0 20px 0 black;
-  background-color: white; }
+  background-position: 0 100%;
+  background-image: url("../img/bg/bg-carpet.jpg"); }
   .min-menu-header .wrapper-bg {
     -webkit-background-size: 800px 800px;
     background-size: 800px;
@@ -12188,10 +12204,11 @@ html body .tp-bullets.simplebullets.round .bullet {
       display: block; }
       .min-menu-header .min-menu-bar a:focus {
         outline: none; }
+  .min-menu-header .bar p {
+    color: #13152A; }
   .min-menu-header .icon-bar {
-    background-color: #f3c36f; }
+    background-color: #13152A; }
   .min-menu-header .lang {
-    color: #f3c36f;
     font-size: 1.2em;
     padding: 30px 0; }
     .min-menu-header .lang .active {

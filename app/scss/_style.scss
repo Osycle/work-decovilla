@@ -923,14 +923,40 @@ $header-min-menu: 100px;
 
 // MIN-MENU
 #min-menu{
-	//background-image: url( "../img/other/texture-2.png" );
-	//background-color: $color-1;
-	background-size: 600px;
-	background-position: right;
+	background-image: url( "../img/bg/bg-carpet.jpg" );
+	//background-color: $color-3;
+  background-size: 920px;
+  background-position: 0 0;
+  color: white;
+	*{
+		color: $color-3;
+	}
+	*{
+		border-color: transparent;
+		background-image: unset;
+		background-color: transparent;
+	}
 	//z-index: 1;
-	color: white;
 	*{
 		//font-family: $font-family-1;
+	}
+	.mm-next{
+		&:after{
+			transition: all 0.3s ease;
+			border-color: $color-3;
+		}
+	}
+	.mm-prev{
+		&:before{
+			border-color: $color-3;
+		}
+	}
+	.mm-subopened{
+		.mm-next{
+			&:after{
+				border-color: rgba(white, 0.0);
+			}
+		}
 	}
 }
 
@@ -949,9 +975,10 @@ $header-min-menu: 100px;
   height: $header-min-menu;
   padding: 10px 25px;
 	z-index: 100;
-	color: white;
 	box-shadow: 0 0 20px 0 black;
-	background-color: white;
+	//background-color: $color-3;
+	background-position: 0 100%;
+	background-image: url( "../img/bg/bg-carpet.jpg" );
 	.wrapper-bg{
 		@extend .fuller;
     background-size: 800px;
@@ -972,11 +999,13 @@ $header-min-menu: 100px;
 			}
 		}
 	}
+	.bar p{
+		color: $color-3;
+	}
 	.icon-bar{
-		background-color: $color-1;
+		background-color: $color-3;
 	}
 	.lang{
-		color: $color-1;
 		font-size: 1.2em;
 		padding: 30px 0;
 		.active{
